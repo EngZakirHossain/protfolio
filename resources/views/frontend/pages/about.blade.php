@@ -1,12 +1,14 @@
+@php
+    $information = \Illuminate\Support\Facades\DB::table('personal_information')->first();
+    @endphp
 <!--// About Section Start //-->
 <section class="section" id="about" data-scroll-index="2">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-img wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
-                    <img src="{{asset('frontend/img/bg/about-img.jpg')}}" alt="About image" title="About image" class="img-fluid">
-                    <a class="about-video-btn" href="https://www.youtube.com/watch?v=YqQx75OPRa0"><i class="fa fa-play"></i></a>
-                    <div class="video-border-line"></div>
+                    <img src="{{ asset('uploads/personal') }}/{{ $information->photo }}" alt="About image" title="About image" class="img-fluid">
+
                 </div>
             </div>
             <div class="col-lg-6">
@@ -25,19 +27,19 @@
                                 <li>
                                     <div class="text">
                                         <h5>Name :</h5>
-                                        <p>Matheus Bartelli</p>
+                                        <p>{{$information->name}}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
                                         <h5>Country :</h5>
-                                        <p>United States</p>
+                                        <p>{{$information->country}}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
-                                        <h5>Freelance :</h5>
-                                        <p>Available</p>
+                                        <h5>Profession :</h5>
+                                        <p>{{$information->profession}}</p>
                                     </div>
                                 </li>
                             </ul>
@@ -46,26 +48,28 @@
                             <ul>
                                 <li>
                                     <div class="text">
-                                        <h5>Univercity :</h5>
-                                        <p>Pratt Institute</p>
+                                        <h5>Experience :</h5>
+                                        <p>{{$information->experience}}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
                                         <h5>Languages :</h5>
-                                        <p>English,Deutch,Arabic</p>
+                                        <p>{{$information->language}}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="text">
                                         <h5>Address :</h5>
-                                        <p>Etowah, TN 37331 United States</p>
+                                        <p>{{$information->address}}</p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <a href="javascript:void(0)" class="primary-btn">
+                        @php
+                        $resume = \Illuminate\Support\Facades\DB::table('resumes')->first();
+                        @endphp
+                    <a href="{{ asset('uploads/Resume') }}/{{ $resume->cv }}" class="primary-btn" download="">
                         <span class="text">Download Cv</span>
                         <span class="icon"><i class="fa fa-download"></i></span>
                     </a>

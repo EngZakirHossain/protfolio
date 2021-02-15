@@ -1,3 +1,6 @@
+@php
+    $information = \Illuminate\Support\Facades\DB::table('personal_information')->first();
+@endphp
 <!--// Hero Section Start //-->
 <section class="hero-banner" data-scroll-index="1">
     <div id="heroparticles"></div>
@@ -7,7 +10,7 @@
                 <div class="hero-inner">
                     <h1>
                         I'm <br>
-                        Matheus Bertelli
+                        {{$information->name}}
                     </h1>
                     <h2>
                         Always new beginnings can move the business forward.A user experience is
@@ -24,7 +27,7 @@
                 <div class="hero-img">
                     <div class="border-line-outer">
                         <div class="border-line-inner">
-                            <img src="{{asset('frontend/img/bg/hero-img.jpg')}}" title="HovyLee phone image" alt="HovyLee phone image" class="img-fluid">
+                            <img src="{{ asset('uploads/personal') }}/{{ $information->photo }}" title="HovyLee phone image" alt="HovyLee phone image" class="img-fluid">
                         </div>
                     </div>
                 </div>

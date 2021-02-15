@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('frontend.pages.index');
-//});
+
 Route::get('/', 'Frontend\FrontendController@index')->name('index');
 
 Route::group(['as'=>'frontend.'], function (){
@@ -25,3 +23,13 @@ Auth::routes();
 
 Route::get('/backend-dashboard', 'HomeController@index')->name('home');
 
+Route::group(['prefix'=>'backend-resume','as'=>'resume.'], function (){
+    Route::get('/resume', 'Backend\ResumeController@index')->name('index');
+    Route::post('/all-resume', 'Backend\ResumeController@store')->name('store');
+    Route::post('/delete', 'Backend\ResumeController@destroy')->name('delete');
+});
+Route::group(['prefix'=>'backend-personal_info','as'=>'info.'], function (){
+    Route::get('/personal_info', 'Backend\PersonalInformationController@index')->name('index');
+    Route::post('/all-personal_info', 'Backend\PersonalInformationController@store')->name('store');
+    Route::post('/delete', 'Backend\PersonalInformationController@destroy')->name('delete');
+});

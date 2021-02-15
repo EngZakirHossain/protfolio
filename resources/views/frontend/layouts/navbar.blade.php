@@ -27,7 +27,7 @@
     <!--// Theme Main Css //-->
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
     <!--// Theme Color Css //-->
-    <link rel="stylesheet" href="{{asset('frontend/css/skins/default-color.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/css/skins/turquose-color.css')}}" />
     @yield('css')
 </head>
 <body data-spy="scroll" data-target="#fixedNavbar">
@@ -41,8 +41,8 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg p-0">
                     <a class="navbar-brand" title="Home" href="{{route('index')}}">
-                        <img src="{{asset('frontend/img/bg/logo_white.png')}}" alt="Logo White" class="img-fluid logo-transparent">
-                        <img src="{{asset('frontend/img/bg/logo_black.png')}}" alt="Logo Black" class="img-fluid logo-normal">
+                        <img src="{{asset('frontend/img/bg/logo.png')}}" alt="Logo White" class="img-fluid logo-transparent">
+                        <img src="{{asset('frontend/img/bg/logo.png')}}" alt="Logo Black" class="img-fluid logo-normal">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fixedNavbar"
                             aria-controls="fixedNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,6 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="blogDropdownMenu">
                                     <a class="dropdown-item" href="#">Blog Grid</a>
-                                    <a class="dropdown-item" href="#">Blog Sidebar</a>
                                     <a class="dropdown-item" href="#">Blog Single</a>
                                 </div>
                             </li>

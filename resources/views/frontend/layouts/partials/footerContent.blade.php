@@ -6,7 +6,7 @@
                 <div class="col-md-6 col-lg-4 footer-widget-resp">
                     <div class="footer-widget">
                         <h6 class="footer-title">About Me</h6>
-                        <img src="img/bg/logo_white.png" alt="footer logo" class="img-fluid footer-logo">
+                        <img src="{{asset('frontend/img/bg/logo_white.png')}}" alt="footer logo" class="img-fluid footer-logo">
                         <p class="footer-desc">
                             It is a long established fact that a reader will be
                             distracted by the readable content..
@@ -29,25 +29,16 @@
                 </div>
                 <div class="col-md-6 col-lg-4 footer-widget-resp">
                     <div class="footer-widget footer-widget-pl">
-                        <h6 class="footer-title">Usefull Links</h6>
+                        <h6 class="footer-title">Use full Links</h6>
                         <ul class="footer-links">
                             <li>
-                                <a href="javascript:void(0)">My Team</a>
+                                <a class="nav-link menu-link" href="#" data-scroll-nav="3">Services</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)">My Services</a>
+                                <a class="nav-link menu-link" href="#" data-scroll-nav="4">Portfolio</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)">My Resume</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">My Works</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Get in Touch</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Privacy Policy</a>
+                                <a class="nav-link menu-link" href="#" data-scroll-nav="7">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -80,7 +71,7 @@
     </div>
     <div class="copyright">
         <div class="container">
-            <p class="copyright-text">© Copyright 2020. Designed By Aip Themes</p>
+            <p class="copyright-text">© Copyright 2021. Design & Developed By Zakir Hossain</p>
         </div>
     </div>
 </footer>
